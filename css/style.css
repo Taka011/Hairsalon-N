@@ -1,0 +1,500 @@
+@charset "UTF-8";
+html {
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f6f4eb;
+  color: #4682a9;
+  letter-spacing: 0.05em;
+  font-family: "BIZ UDPMincho", serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.container {
+  margin-left: 300px;
+}
+
+.wrapper {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+  letter-spacing: 0.01em;
+  font-family: "Noto Serif JP";
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: #4682a9;
+  bottom: -5px;
+  margin: 0 auto;
+}
+
+.mask {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #f6f4eb;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-size: 50px;
+}
+.mask span {
+  font-size: 16px;
+  position: relative;
+  top: 15px;
+}
+
+/* スクロールイベント */
+/* フェードイン最初は非表示 */
+.fade-in {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-property: opacity, transform;
+  transform: translate(0, 50px);
+}
+
+/* 特定の位置までスクロールすると表示 */
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* header */
+#navi {
+  height: 100vh;
+  width: 300px;
+  background-color: #4682a9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #f6f4eb;
+}
+
+.header__logo {
+  position: relative;
+  left: 30%;
+  font-size: 80px;
+  margin-top: 60px;
+}
+.header__logo span {
+  font-size: 16px;
+}
+
+.header__logo-sp {
+  position: relative;
+  font-size: 40px;
+  display: none;
+  color: #f6f4eb;
+  padding: 10px;
+}
+.header__logo-sp span {
+  font-size: 14px;
+}
+
+.header__list {
+  position: relative;
+  left: 30%;
+}
+
+.header__list-item {
+  padding: 26px 0;
+}
+
+/* メインビジュアル */
+.mainvisual {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.mainvisual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(90deg, transparent 0 50%, #f6f4eb 100%);
+}
+.mainvisual img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* about */
+#about {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.about__content {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.about__image {
+  width: 50%;
+  margin-bottom: 200px;
+  z-index: -1;
+  position: relative;
+}
+.about__image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  right: 20px;
+  background: #4682a9;
+  z-index: -1;
+}
+
+.about__text {
+  width: 40%;
+  position: relative;
+  line-height: 1.6;
+  top: 100px;
+}
+.about__text p {
+  padding: 0 20px;
+}
+
+.about__hair {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.about__hair img {
+  width: 80%;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: contrast(0.8);
+}
+
+/* slick */
+.slider {
+  max-width: 50%;
+}
+.slider .slickslide {
+  height: auto !important;
+}
+
+/* menu */
+#menu {
+  padding: 100px 0;
+  margin-bottom: 80px;
+  background-color: #4682a9;
+  color: #f6f4eb;
+  border-radius: 100%/170px;
+}
+
+.menu__content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  position: relative;
+}
+
+.menu__left {
+  width: 50%;
+  margin-right: 150px;
+}
+
+.menu__right {
+  width: 50%;
+}
+
+.menu__title {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 0;
+  font-family: "Noto Serif JP";
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu__list dt {
+  width: 50%;
+}
+.menu__list dd {
+  width: 50%;
+  text-align: right;
+}
+.menu__list dt, .menu__list dd {
+  padding: 20px 0;
+}
+
+.attention {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+}
+
+/* access */
+#access {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.access__text {
+  margin-bottom: 20px;
+}
+
+/* reservation */
+#reservation {
+  margin-bottom: 200px;
+  padding: 100px 0;
+  text-align: center;
+  color: #f6f4eb;
+  background-color: #4682a9;
+  border-radius: 50%/100px;
+}
+
+.reservation__title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Noto Serif JP";
+}
+
+.reservation__text {
+  padding: 10px 0;
+}
+
+.open {
+  margin-bottom: 40px;
+}
+
+/* footer */
+footer {
+  display: block;
+  color: #4682a9;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 24px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+.footer-logo span {
+  font-size: 10px;
+}
+
+.copyright {
+  font-size: 10px;
+  padding-left: 30px;
+}
+
+.page-top {
+  position: fixed;
+  bottom: 30px;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 20;
+}
+.page-top::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  color: #4682a9;
+  line-height: 1;
+  width: 10px;
+  height: 30px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0.64952em 0.375em;
+  border-bottom-color: currentColor;
+  border-top: 0;
+  z-index: 20;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0;
+  }
+  .wrapper {
+    padding: 0 30px;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+  header {
+    width: 100%;
+    height: 80px;
+    z-index: 30;
+    position: static;
+    background-color: #4682a9;
+    position: fixed;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__logo-sp {
+    display: block;
+  }
+  #navi {
+    position: relative;
+    left: -100%;
+    transition: all 0.5s;
+    width: 100%;
+    z-index: 40;
+  }
+  #navi.active {
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+  }
+  .header__list {
+    left: 0;
+  }
+  .header__list-item {
+    padding: 30px;
+  }
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .hamburger span {
+    display: inline-block;
+    background: #f6f4eb;
+    width: 45%;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    transition: all 0.5s;
+    border-radius: 2px;
+  }
+  .hamburger span:nth-of-type(1) {
+    top: 15px;
+  }
+  .hamburger span:nth-of-type(2) {
+    top: 23px;
+  }
+  .hamburger span:nth-of-type(3) {
+    top: 31px;
+  }
+  .hamburger.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+  }
+  .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+    transition: all 0.1s;
+  }
+  .hamburger.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+  }
+  /* main */
+  .mainvisual {
+    height: auto;
+    margin-bottom: 100px;
+    padding-top: 80px;
+  }
+  #about {
+    margin-top: 100px;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .about__image {
+    width: 90%;
+    z-index: 1;
+    margin: 0 auto 20px auto;
+  }
+  .about__image::after {
+    right: 20px;
+  }
+  .about__text {
+    width: 90%;
+    position: static;
+    margin: 20px auto 0 auto;
+    right: 0;
+    padding: 40px 0;
+  }
+  .about__hair {
+    margin: 0 auto;
+    width: 100%;
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .about__hair img {
+    padding: 0 16px;
+  }
+  /* slider */
+  .slider {
+    max-width: 100%;
+  }
+  iframe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  /* menu */
+  .menu__content {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .menu__left, .menu__right {
+    width: 100%;
+  }
+  footer {
+    margin-left: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
