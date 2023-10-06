@@ -10,11 +10,7 @@ body {
   background-color: #f6f4eb;
   color: #4682a9;
   letter-spacing: 0.05em;
-  font-family: 'BIZ UDPMincho', serif;
   font-family: 'Noto Sans JP', sans-serif;
-  font-family: 'Noto Serif JP', serif;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Sawarabi Mincho', serif;
 }
 
 img {
@@ -519,6 +515,10 @@ footer {
     margin: 20px auto 0 auto;
     right: 0;
     padding: 40px 0;
+
+    p {
+      padding: 0;
+    }
   }
 
   .about__hair {
@@ -528,6 +528,7 @@ footer {
 
     img {
       padding: 0 16px;
+      width: 100%;
     }
   }
 
