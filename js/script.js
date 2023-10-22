@@ -57,11 +57,8 @@ $(function() {
     // ページフェードイン・アウト
     $(window).on('load', function() {
         setTimeout(function(){
-            $('.mask').fadeIn(1000);
+            $('.mask').fadeOut(500);
         },500);
-        setTimeout(function(){
-            $('.mask').fadeOut(1000);
-        },1000);
     })
     
     // スライダー
